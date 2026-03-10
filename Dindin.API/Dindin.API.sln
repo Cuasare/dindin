@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dindin.API", "Dindin.API\Dindin.API.csproj", "{73F9173B-12BE-461E-B8ED-F22C18DE8B1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73F9173B-12BE-461E-B8ED-F22C18DE8B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73F9173B-12BE-461E-B8ED-F22C18DE8B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73F9173B-12BE-461E-B8ED-F22C18DE8B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73F9173B-12BE-461E-B8ED-F22C18DE8B1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

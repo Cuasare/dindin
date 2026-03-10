@@ -1,0 +1,13 @@
+﻿# Build
+bin/
+obj/
+
+# Config
+appsettings.json
+appsettings.Development.json
+
+# Rider/JetBrains
+.idea/
+
+# Visual Studio
+.vs/
