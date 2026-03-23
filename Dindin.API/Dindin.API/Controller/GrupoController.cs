@@ -50,7 +50,7 @@ public class GrupoController : ControllerBase
 
     [Authorize]
     [HttpPost("createGroup")]
-    public async Task<IActionResult> CreateGroup(createGroupDTos dto)
+    public async Task<IActionResult> CreateGroup(CreateGroupDto dto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 

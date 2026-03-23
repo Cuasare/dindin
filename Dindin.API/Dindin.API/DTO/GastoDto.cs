@@ -3,7 +3,7 @@ using Dindin.API.Models;
 
 namespace Dindin.API.DTO;
 
-public class inserirGastoDTOs
+public class InserirGastoDto
 {
     [Required]
     [MaxLength(200)]
@@ -21,13 +21,15 @@ public class inserirGastoDTOs
     public int? GrupoId { get; set; }
 }
 
-public class deletarGastoDTOs
+public class DeletarGastoDto
 {
     [Required]
     public int Id { get; set; }
+    
+    public int? GroupId { get; set; }
 }
 
-public class atualizarGastoDTOs
+public class AtualizarGastoDto
 {
     [MaxLength(200)]
     public string? Descricao { get; set; }
@@ -43,7 +45,7 @@ public class atualizarGastoDTOs
     public int Id { get; set; }
 }
 
-public class obterGastos
+public class ObterGastosDto
 {
     public int? GroupId { get; set; }
     public DateTime? DataInicio { get; set; }

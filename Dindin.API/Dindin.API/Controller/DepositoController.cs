@@ -21,7 +21,7 @@ public class DepositoController : ControllerBase
 
     [Authorize]
     [HttpPost("inserirDeposito")]
-    public async Task<IActionResult> inserirDeposito(inserirDepositoDTOs dto)
+    public async Task<IActionResult> InserirDeposito(InserirDepositoDto dto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
@@ -44,7 +44,7 @@ public class DepositoController : ControllerBase
 
     [Authorize]
     [HttpDelete("deletarDeposito")]
-    public async Task<IActionResult> deletarDeposito(deletarDepositoDTOs dto)
+    public async Task<IActionResult> DeletarDeposito(DeletarDepositoDto dto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
@@ -52,19 +52,18 @@ public class DepositoController : ControllerBase
 
         var depositoExiste = await _context.Depositos.AnyAsync(d => d.UserId == userId && d.Id == dto.Id);
 
-        if (depositoExiste)
+        if (!depositoExiste) return NotFound("Depósito não existe");
+        
+        try
         {
-            try
-            {
-                var deposito = await _context.Depositos.FirstOrDefaultAsync(d => d.Id == dto.Id);
+            var deposito = await _context.Depositos.FirstOrDefaultAsync(d => d.Id == dto.Id);
 
-                _context.Depositos.Remove(deposito);
-                await _context.SaveChangesAsync();
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e);
-            }
+            _context.Depositos.Remove(deposito);
+            await _context.SaveChangesAsync();
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e);
         }
 
         return Ok($"Deposito excluido com sucesso!");
@@ -72,32 +71,47 @@ public class DepositoController : ControllerBase
 
     [Authorize]
     [HttpPatch("atualizarDeposito")]
-    public async Task<IActionResult> atualizarDeposito(atualizarDepositoDTOs dto)
+    public async Task<IActionResult> AtualizarDeposito(AtualizarDepositoDto dto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
         var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
 
-        var depositoExiste = await _context.Depositos.FirstOrDefaultAsync(d => d.Id == dto.Id && d.UserId == userId);
+        Group? groupExists = null;
 
-        var deposito = await _context.Depositos.FirstOrDefaultAsync(d => d.UserId == userId);
+        if (dto.GroupId.HasValue) groupExists = await _context.Grupo.FirstOrDefaultAsync(g => g.Id == dto.GroupId);
+
+        bool userInGroup = false;
+
+        if (groupExists != null)
+        {
+            userInGroup = await _context.UserGrupo.AnyAsync(u => u.GrupoId == dto.GroupId && u.UserId == userId);
+
+            if (!userInGroup) return BadRequest("Usuário não pertence ao grupo");
+        }
+        
+        var depositoExiste = await _context.Depositos.FirstOrDefaultAsync(d => d.Id == dto.Id && d.UserId == userId);
 
         if (depositoExiste != null)
         {
-            if (dto.Descricao != null) deposito.Descricao = dto.Descricao;
-            if (dto.Categoria != null) deposito.Categoria = dto.Categoria;
-            if (dto.Quantidade != null) deposito.Quantidade = dto.Quantidade.Value;
-            if (dto.MetodoDeposito != null) deposito.MetodoDeposito = dto.MetodoDeposito.Value;
+            if (dto.Descricao != null) depositoExiste.Descricao = dto.Descricao;
+            if (dto.Categoria != null) depositoExiste.Categoria = dto.Categoria;
+            if (dto.Quantidade != null) depositoExiste.Quantidade = dto.Quantidade.Value;
+            if (dto.MetodoDeposito != null) depositoExiste.MetodoDeposito = dto.MetodoDeposito.Value;
+            
+            await _context.SaveChangesAsync();
         }
-
-        await _context.SaveChangesAsync();
-
+        else
+        {
+            return BadRequest("deposito não existe");
+        }
+        
         return Ok($"Deposito de descrição {dto.Descricao} atualizado com sucesso!");
     }
 
     [Authorize]
     [HttpGet("obterDepositos")]
-    public async Task<IActionResult> obterDepositos([FromQuery] obterDepositosDTOs dto)
+    public async Task<IActionResult> ObterDepositos([FromQuery] ObterDepositosDto dto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 

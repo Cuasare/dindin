@@ -4,7 +4,7 @@ using Dindin.API.Models;
 
 namespace Dindin.API.DTO;
 
-public class inserirDepositoDTOs
+public class InserirDepositoDto
 {
     [Required]
     [MaxLength(200)]
@@ -20,13 +20,13 @@ public class inserirDepositoDTOs
     public string? Categoria { get; set; }
 }
 
-public class deletarDepositoDTOs
+public class DeletarDepositoDto
 {
     [Required]
     public int Id { get; set; }
 }
 
-public class atualizarDepositoDTOs
+public class AtualizarDepositoDto
 {
     [MaxLength(200)]
     public string? Descricao { get; set; }
@@ -40,9 +40,11 @@ public class atualizarDepositoDTOs
     
     [Required] 
     public int Id { get; set; }
+    
+    public int? GroupId { get; set; }
 }
 
-public class obterDepositosDTOs
+public class ObterDepositosDto
 {
     public DateTime? DataInicio { get; set; }
     public DateTime? DataFim { get; set; }

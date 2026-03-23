@@ -55,7 +55,7 @@ public class GastosController : ControllerBase
 
     [Authorize]
     [HttpPost("inserirGastos")]
-    public async Task<IActionResult> InserirGastos(inserirGastoDTOs dto)
+    public async Task<IActionResult> InserirGastos(InserirGastoDto dto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
@@ -63,10 +63,7 @@ public class GastosController : ControllerBase
 
         Group? groupExists = null;
         
-        if (dto.GrupoId.HasValue)
-        {
-            groupExists = await _context.Grupo.FirstOrDefaultAsync(g => g.Id == dto.GrupoId);    
-        }
+        if (dto.GrupoId.HasValue) groupExists = await _context.Grupo.FirstOrDefaultAsync(g => g.Id == dto.GrupoId);
 
         bool userInGroup = false;
         
@@ -74,10 +71,7 @@ public class GastosController : ControllerBase
         {
             userInGroup = await _context.UserGrupo.AnyAsync(ug => ug.UserId == userId && ug.GrupoId == groupExists.Id);
 
-            if (!userInGroup)
-            {
-                return BadRequest("Usuário nao pertence ao grupo!");
-            }
+            if (!userInGroup) return BadRequest("Usuário nao pertence ao grupo!");
         }
 
         Gastos? novoGasto = null;
@@ -114,7 +108,7 @@ public class GastosController : ControllerBase
     
     [Authorize]
     [HttpPatch("atualizarGastos")]
-    public async Task<IActionResult> AtualizarGastos(atualizarGastoDTOs dto)
+    public async Task<IActionResult> AtualizarGastos(AtualizarGastoDto dto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
@@ -122,14 +116,12 @@ public class GastosController : ControllerBase
         
         var gastoExiste = await _context.Gastos.FirstOrDefaultAsync(g => g.UserId == userId && g.Id == dto.Id);
 
-        var gasto = await _context.Gastos.FirstOrDefaultAsync(g => g.UserId == userId);
-
         if (gastoExiste != null)
         {
-            if (dto.Categoria != null) gasto.Categoria = dto.Categoria;
-            if (dto.Descricao != null) gasto.Descricao = dto.Descricao;
-            if (dto.MetodoPagamento != null) gasto.MetodoPagamento = dto.MetodoPagamento.Value;
-            if (dto.Quantidade != null) gasto.Quantidade = dto.Quantidade.Value;
+            if (dto.Categoria != null) gastoExiste.Categoria = dto.Categoria;
+            if (dto.Descricao != null) gastoExiste.Descricao = dto.Descricao;
+            if (dto.MetodoPagamento != null) gastoExiste.MetodoPagamento = dto.MetodoPagamento.Value;
+            if (dto.Quantidade != null) gastoExiste.Quantidade = dto.Quantidade.Value;
 
             await _context.SaveChangesAsync();
         }
@@ -143,7 +135,7 @@ public class GastosController : ControllerBase
 
     [Authorize]
     [HttpDelete("deletarGastos")]
-    public async Task<IActionResult> DeletarGastos(deletarGastoDTOs dto)
+    public async Task<IActionResult> DeletarGastos(DeletarGastoDto dto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
@@ -151,10 +143,7 @@ public class GastosController : ControllerBase
 
         var gastoUsuario = await _context.Gastos.FirstOrDefaultAsync(g => userId == g.UserId && g.Id == dto.Id);
         
-        if (gastoUsuario == null)
-        {
-            return BadRequest("Usuario ou ID incorretos");
-        }
+        if (gastoUsuario == null) return BadRequest("Usuario ou ID incorretos");
         
         try
         {
@@ -173,7 +162,7 @@ public class GastosController : ControllerBase
 
     [Authorize]
     [HttpGet("obterGastos")]
-    public async Task<IActionResult> ObterGastos([FromQuery] obterGastos dto)
+    public async Task<IActionResult> ObterGastos([FromQuery] ObterGastosDto dto)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
@@ -183,7 +172,7 @@ public class GastosController : ControllerBase
         
         if (dto.GroupId.HasValue)
         {
-            groupExists = await _context.Grupo.FirstOrDefaultAsync(g => g.Id == dto.GroupId);    
+            groupExists = await _context.Grupo.FirstOrDefaultAsync(g => g.Id == dto.GroupId);
         }
 
         bool userInGroup = false;
@@ -199,21 +188,16 @@ public class GastosController : ControllerBase
         }
 
         IQueryable<Gastos> query = null;
-        
-        if (userInGroup)
-        {
-            query = _context.Gastos.Where(g => g.UserId == userId && g.GrupoId == groupExists.Id);
-        }
-        else
-        {
-            query = _context.Gastos.Where(g => g.UserId == userId);
-        }
+
+        query = userInGroup
+            ? _context.Gastos.Where(g => g.UserId == userId && g.GrupoId == groupExists.Id)
+            : _context.Gastos.Where(g => g.UserId == userId);
         
         if (dto.DataInicio.HasValue) query = query.Where(g => g.AddAt >= dto.DataInicio.Value.ToUniversalTime());
         if (dto.DataFim.HasValue) query = query.Where(g => g.AddAt <= dto.DataFim.Value.ToUniversalTime());
 
         var resultado = await query.ToListAsync();
         
-        return Ok(resultado);
+        return resultado.Any() ? Ok(resultado) : Ok("Não existem dados cadastrados");
     }
 }

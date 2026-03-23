@@ -2,7 +2,7 @@
 
 namespace Dindin.API.DTO;
 
-public class createGroupDTos
+public class CreateGroupDto
 {
     [Required]
     public string Nome { get; set; }

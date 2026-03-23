@@ -8,7 +8,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="058624e7-ee3c-4c80-b602-5168cf1ae359" name="Changes" comment="" />
+    <list default="true" id="058624e7-ee3c-4c80-b602-5168cf1ae359" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Controller/DepositoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Controller/DepositoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Controller/GastosController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Controller/GastosController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Controller/GrupoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Controller/GrupoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/DTO/AuthDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/DTO/AuthDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/DTO/DepositoDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/DTO/DepositoDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/DTO/GastoDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/DTO/GastoDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/DTO/GrupoDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/DTO/GrupoDto.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +26,7 @@
   <component name="CopilotPersistence">
     <persistenceIdMap>
       <entry key="_C:/Users/kauan/RiderProjects/Dindin.API" value="39woF0lmebr6Tc7HbMpOvmX5j4P" />
+      <entry key="_E:/Area de trabalho 2/Code Projects/C#/DinDin/Dindin.API" value="3AlJ8YPWuAfnytW2JQZCqvLFQpc" />
     </persistenceIdMap>
   </component>
   <component name="CopilotUserSelectedModel">
@@ -29,8 +39,20 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Cuasare&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Cuasare/dindin.git&quot;,
+    &quot;accountId&quot;: &quot;56b623a5-afb3-42b3-873a-94d03238ed1e&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Dindin.API/Controller/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dindin.API/Controller/DepositoController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -38,15 +60,19 @@
     <setting file="file://$PROJECT_DIR$/Dindin.API/Controller/GrupoController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dindin.API/DTO/GastoDTOs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dindin.API/DTO/GrupoDTOs.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dindin.API/DTO/UserGrupo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dindin.API/Data/AppDbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dindin.API/Models/Depositos.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dindin.API/Models/Gastos.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dindin.API/Models/Grupo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dindin.API/Models/RefreshToken.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dindin.API/Models/User.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dindin.API/Models/UserGrupo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dindin.API/obj/Debug/net10.0/.NETCoreApp,Version=v10.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="HttpClientEndpointsTabState">
+    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests /&gt;" />
+  </component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -71,19 +97,21 @@
   &quot;keyToString&quot;: {
     &quot;.NET Launch Settings Profile.Dindin.API: http.executor&quot;: &quot;Run&quot;,
     &quot;.NET Launch Settings Profile.Dindin.API: https.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.completions.CompletionsConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.qodana&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -160,7 +188,18 @@
       <workItem from="1772215904582" duration="863000" />
       <workItem from="1772216804338" duration="6383000" />
       <workItem from="1772257821615" duration="76000" />
+      <workItem from="1773161066451" duration="11465000" />
+      <workItem from="1774291521836" duration="7374000" />
     </task>
+    <task id="LOCAL-00001" summary="Primeiro commit">
+      <option name="closed" value="true" />
+      <created>1773163901322</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1773163901322</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +240,11 @@
             </State>
           </value>
         </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
       </map>
     </option>
   </component>
@@ -209,6 +253,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Primeiro commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primeiro commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
