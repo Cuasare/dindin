@@ -5,6 +5,7 @@ using System.Text;
 using Dindin.API.Data;
 using Dindin.API.DTO;
 using Dindin.API.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -103,10 +104,17 @@ public class AuthController : ControllerBase
         _context.RefreshTokens.Add(newRefreshToken);
         await _context.SaveChangesAsync();
         
+        Response.Cookies.Append("refreshToken", newRefreshToken.Token, new CookieOptions
+        {
+            HttpOnly = true,
+            Secure = false,
+            SameSite = SameSiteMode.Lax,
+            Expires = DateTime.UtcNow.AddDays(7)
+        });
+        
         return Ok(new
         {
-            accessToken = token,
-            refreshToken = newRefreshToken.Token
+            accessToken = token
         });
     }
 
@@ -160,6 +168,30 @@ public class AuthController : ControllerBase
             accessToken = newAccessToken,
             refreshToken = newRefreshToken.Token
         });
+    }
+
+    [Authorize]
+    [HttpPost("logout")]
+    public async Task<IActionResult> Logout()
+    {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+
+        var refreshToken = Request.Cookies["refreshToken"];
+        if (string.IsNullOrEmpty(refreshToken)) return BadRequest("Refresh token nao encontrado");
+
+        var token = await _context.RefreshTokens.FirstOrDefaultAsync(r => r.Token == refreshToken);
+
+        if (token == null) return BadRequest("Token inválido");
+        if (token.UserId != userId) return Unauthorized();
+        if (token.IsRevoked) return BadRequest("Ja foi revogado!");
+        if (token.ExpiresAt < DateTime.UtcNow) return BadRequest("Ja expirou!");
+
+        token.IsRevoked = true;
+        await _context.SaveChangesAsync();
+
+        return Ok("Logout realizado com sucesso!");
     }
     
 }
