@@ -10,13 +10,7 @@
   <component name="ChangeListManager">
     <list default="true" id="058624e7-ee3c-4c80-b602-5168cf1ae359" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dindin.API/Controller/DepositoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Controller/DepositoController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dindin.API/Controller/GastosController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Controller/GastosController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dindin.API/Controller/GrupoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Controller/GrupoController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dindin.API/DTO/AuthDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/DTO/AuthDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dindin.API/DTO/DepositoDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/DTO/DepositoDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dindin.API/DTO/GastoDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/DTO/GastoDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dindin.API/DTO/GrupoDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/DTO/GrupoDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Controller/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Controller/AuthController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +52,6 @@
     <setting file="file://$PROJECT_DIR$/Dindin.API/Controller/DepositoController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dindin.API/Controller/GastosController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dindin.API/Controller/GrupoController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dindin.API/DTO/GastoDTOs.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dindin.API/DTO/GrupoDTOs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dindin.API/Data/AppDbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dindin.API/Models/Depositos.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dindin.API/Models/Gastos.cs" root0="FORCE_HIGHLIGHTING" />
@@ -189,7 +181,8 @@
       <workItem from="1772216804338" duration="6383000" />
       <workItem from="1772257821615" duration="76000" />
       <workItem from="1773161066451" duration="11465000" />
-      <workItem from="1774291521836" duration="7374000" />
+      <workItem from="1774291521836" duration="8123000" />
+      <workItem from="1774390079459" duration="5568000" />
     </task>
     <task id="LOCAL-00001" summary="Primeiro commit">
       <option name="closed" value="true" />
@@ -199,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773163901322</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactor: renomear DTOs para PascalCase e adicionar suporte a grupos nos endpoints">
+      <option name="closed" value="true" />
+      <created>1774300307016</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1774300307016</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +255,8 @@
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Primeiro commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primeiro commit" />
+    <MESSAGE value="refactor: renomear DTOs para PascalCase e adicionar suporte a grupos nos endpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: renomear DTOs para PascalCase e adicionar suporte a grupos nos endpoints" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

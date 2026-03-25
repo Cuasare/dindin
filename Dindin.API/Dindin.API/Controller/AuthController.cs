@@ -1,4 +1,4 @@
-﻿﻿using System.IdentityModel.Tokens.Jwt;
+﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -38,8 +38,8 @@ public class AuthController : ControllerBase
         };
 
         var token = new JwtSecurityToken(
-            issuer: _configuration["Jwt:Issuer"],
-            audience: _configuration["Jwt:Audience"],
+            issuer: _configuration["JWT:Issuer"],
+            audience: _configuration["JWT:Audience"],
             claims: claims,
             expires: DateTime.UtcNow.AddHours(8),
             signingCredentials: credentials
@@ -85,6 +85,12 @@ public class AuthController : ControllerBase
         var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == dto.Email);
         if (user == null || !BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash))
             return Unauthorized("Email ou senha inválidos!");
+
+        var tokensInvalidos = await _context.RefreshTokens
+            .Where(r => r.UserId == user.Id && (r.ExpiresAt < DateTime.UtcNow || r.IsRevoked))
+            .ToListAsync();
+        
+        _context.RefreshTokens.RemoveRange(tokensInvalidos);
 
         var token = GenerateToken(user);
         var newRefreshToken = new RefreshToken
