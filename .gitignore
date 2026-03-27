@@ -5,6 +5,7 @@ obj/
 # Config
 appsettings.json
 appsettings.Development.json
+.env
 
 # Rider/JetBrains
 .idea/
