@@ -15,6 +15,20 @@
         condition: service_healthy
     environment:
       ConnectionStrings__DefaultConnection: "Host=database;Port=5432;Database=${POSTGRES_DB};Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}"
+    
+  frontend:
+    build: Dindin.React/vite-project
+    ports:
+      - "5173:5173"
+    volumes:
+      - "./DinDin.React/vite-project:/app"
+      - /app/node_modules
+    command:
+      - "npm"
+      - "run"
+      - "dev"
+      - "--"
+      - "--host"
 
   database:
     image: postgres:18
