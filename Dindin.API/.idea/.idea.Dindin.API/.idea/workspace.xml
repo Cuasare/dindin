@@ -10,7 +10,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="058624e7-ee3c-4c80-b602-5168cf1ae359" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/copilot.data.migration.ask2agent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/dataSources/129ec676-8da7-43ef-9512-533261257d6e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/dataSources/129ec676-8da7-43ef-9512-533261257d6e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dindin.API/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Controller/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Controller/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Controller/DepositoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Controller/DepositoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Controller/GastosController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Controller/GastosController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Controller/GrupoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Controller/GrupoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/DTO/AuthDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/DTO/AuthDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/DTO/DepositoDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/DTO/DepositoDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/DTO/GastoDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/DTO/GastoDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/DTO/GrupoDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/DTO/GrupoDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/DTO/UserGrupoDTOs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/DTO/UserGrupoDTOs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Data/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Data/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Dindin.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Dindin.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Dindin.API.http" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Dindin.API.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Migrations/20260227183422_InitialMigration.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Migrations/20260227183422_InitialMigration.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Migrations/20260227183422_InitialMigration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Migrations/20260227183422_InitialMigration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Migrations/20260227183954_FixGrupoRemoveUserId.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Migrations/20260227183954_FixGrupoRemoveUserId.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Migrations/20260227183954_FixGrupoRemoveUserId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Migrations/20260227183954_FixGrupoRemoveUserId.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Models/Depositos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Models/Depositos.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Models/Gastos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Models/Gastos.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Models/Group.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Models/Group.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Models/RefreshToken.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Models/RefreshToken.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Models/UserGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Models/UserGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dindin.API/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Dindin.API/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dindin.React/vite-project/src/Routes/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Dindin.React/vite-project/src/Routes/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +58,7 @@
   </component>
   <component name="CopilotPersistence">
     <persistenceIdMap>
+      <entry key="_//wsl.localhost/Ubuntu-24.04/home/cuasare/dindin/Dindin.API" value="3BgGbtSgcnF6wQ3c2KeObbRkx0U" />
       <entry key="_C:/Users/kauan/Documents/Code Projects/CSharp/dindin/Dindin.API" value="3BeHUdfLtaNMuwkrXeXltAReyT4" />
       <entry key="_C:/Users/kauan/RiderProjects/Dindin.API" value="39woF0lmebr6Tc7HbMpOvmX5j4P" />
       <entry key="_E:/Area de trabalho 2/Code Projects/C#/DinDin/Dindin.API" value="3AlJ8YPWuAfnytW2JQZCqvLFQpc" />
@@ -42,12 +82,12 @@
     &quot;assignee&quot;: &quot;Cuasare&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Cuasare/dindin.git&quot;,
-    &quot;accountId&quot;: &quot;56b623a5-afb3-42b3-873a-94d03238ed1e&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:Cuasare/dindin.git",
+    "accountId": "56b623a5-afb3-42b3-873a-94d03238ed1e"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Dindin.API/Controller/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dindin.API/Controller/DepositoController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -249,6 +289,9 @@
       <workItem from="1774579351240" duration="5811000" />
       <workItem from="1774640552448" duration="5206000" />
       <workItem from="1774842628664" duration="148000" />
+      <workItem from="1774903376203" duration="1043000" />
+      <workItem from="1774981144406" duration="1872000" />
+      <workItem from="1775177423902" duration="10803000" />
     </task>
     <task id="LOCAL-00001" summary="Primeiro commit">
       <option name="closed" value="true" />

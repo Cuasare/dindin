@@ -21,7 +21,7 @@
     ports:
       - "5173:5173"
     volumes:
-      - "./DinDin.React/vite-project:/app"
+      - "./Dindin.React/vite-project:/app"
       - /app/node_modules
     command:
       - "npm"
